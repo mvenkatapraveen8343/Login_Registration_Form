@@ -4,124 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SecurePortal | Login & Registration</title>
+    <title>Secure Portal | Login & Registration</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <!-- Main Container -->
+    <!-- Authentication Container -->
     <div class="container" id="auth-container">
-        <!-- Form Section -->
-        <div class="form-section">
-            <div class="form-container">
-                <div class="form-title">
-                    <h2>SecurePortal</h2>
-                    <p>Secure access to your digital world</p>
-                </div>
-
-                <div class="tabs">
-                    <button class="tab active" data-tab="login">Login</button>
-                    <button class="tab" data-tab="register">Register</button>
-                </div>
-
-                <!-- Login Form -->
-                <form id="login-form" class="form active">
-                    <div class="input-group">
-                        <label for="login-email">Email Address</label>
-                        <input type="email" id="login-email" placeholder="Enter your email" required>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="login-password">Password</label>
-                        <div class="password-container">
-                            <input type="password" id="login-password" placeholder="Enter your password" required>
-                            <button type="button" class="toggle-password" id="toggle-login-password">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="btn">Login</button>
-                </form>
-
-                <!-- Registration Form -->
-                <form id="register-form" class="form">
-                    <div class="input-group">
-                        <label for="register-name">Full Name</label>
-                        <input type="text" id="register-name" placeholder="Enter your full name" required>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="register-email">Email Address</label>
-                        <input type="email" id="register-email" placeholder="Enter your email" required>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="register-password">Create Password</label>
-                        <div class="password-container">
-                            <input type="password" id="register-password" placeholder="Create a strong password"
-                                required>
-                            <button type="button" class="toggle-password" id="toggle-register-password">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                        </div>
-
-                        <div class="password-strength">
-                            <div class="strength-title">Password Strength:</div>
-                            <div class="strength-meter">
-                                <div class="strength-bar">
-                                    <div class="strength-bar-fill" id="bar-1"></div>
-                                </div>
-                                <div class="strength-bar">
-                                    <div class="strength-bar-fill" id="bar-2"></div>
-                                </div>
-                                <div class="strength-bar">
-                                    <div class="strength-bar-fill" id="bar-3"></div>
-                                </div>
-                                <div class="strength-bar">
-                                    <div class="strength-bar-fill" id="bar-4"></div>
-                                </div>
-                                <div class="strength-bar">
-                                    <div class="strength-bar-fill" id="bar-5"></div>
-                                </div>
-                            </div>
-                            <div class="strength-text" id="strength-text">Very Weak</div>
-                        </div>
-
-                        <!-- Visual password requirement indicator -->
-                        <div class="password-visual">
-                            <div id="length-visual"></div>
-                            <div id="uppercase-visual"></div>
-                            <div id="lowercase-visual"></div>
-                            <div id="number-visual"></div>
-                            <div id="special-visual"></div>
-                        </div>
-
-                        <p class="hint">Requirements: Minimum 8 characters, A-Z, a-z, 0-9, !@#$%</p>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="register-confirm">Confirm Password</label>
-                        <div class="password-container">
-                            <input type="password" id="register-confirm" placeholder="Confirm your password" required>
-                            <button type="button" class="toggle-password" id="toggle-register-confirm">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                        </div>
-                        <p id="password-match" style="margin-top: 10px; display: none; font-weight: 500;"></p>
-                    </div>
-
-                    <button type="submit" class="btn" id="register-btn">Create Account</button>
-                </form>
+        <div class="form-container">
+            <div class="form-title">
+                <h2>Secure Portal</h2>
+                <p>Secure access to your digital world</p>
             </div>
+
+            <div class="tabs">
+                <button class="tab active" data-tab="login">Login</button>
+                <button class="tab" data-tab="register">Register</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="form active">
+                <div class="input-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Password</label>
+                    <div class="password-container">
+                        <input type="password" id="login-password" placeholder="Enter your password" required>
+                        <button type="button" class="toggle-password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+
+            <!-- Register Form -->
+            <form id="register-form" class="form">
+                <div class="input-group">
+                    <label for="register-name">Full Name</label>
+                    <input type="text" id="register-name" placeholder="Enter your full name" required>
+                </div>
+                <div class="input-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="register-password">Password</label>
+                    <div class="password-container">
+                        <input type="password" id="register-password" placeholder="Create a strong password"
+                            required>
+                        <button type="button" class="toggle-password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="strength-bar">
+                        <div id="strength-fill"></div>
+                    </div>
+                    <p id="missing-requirement"></p>
+                </div>
+                <div class="input-group">
+                    <label for="register-confirm">Confirm Password</label>
+                    <div class="password-container">
+                        <input type="password" id="register-confirm" placeholder="Confirm your password" required>
+                        <button type="button" class="toggle-password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <p id="password-match"></p>
+                </div>
+                <button type="submit" class="btn" id="register-btn" disabled>Create Account</button>
+            </form>
         </div>
     </div>
 
     <!-- Dashboard -->
     <div class="dashboard" id="dashboard">
         <div class="dashboard-header">
-            <h2 class="dashboard-title">SecurePortal Dashboard</h2>
+            <h2>Secure Portal Dashboard</h2>
             <div class="user-info">
                 <div class="user-avatar" id="user-avatar">U</div>
                 <button class="logout-btn" id="logout-btn">
@@ -129,97 +91,61 @@
                 </button>
             </div>
         </div>
-
         <div class="dashboard-content">
             <div class="sidebar">
-                <div class="nav-item active">
-                    <i class="fas fa-home"></i> Dashboard
-                </div>
-                <div class="nav-item">
-                    <i class="fas fa-user"></i> My Profile
-                </div>
-                <div class="nav-item">
-                    <i class="fas fa-chart-bar"></i> Analytics
-                </div>
-                <div class="nav-item">
-                    <i class="fas fa-cog"></i> Settings
-                </div>
-                <div class="nav-item">
-                    <i class="fas fa-shield-alt"></i> Security
-                </div>
-                <div class="nav-item">
-                    <i class="fas fa-question-circle"></i> Support
-                </div>
+                <div class="nav-item active"><i class="fas fa-home"></i> Dashboard</div>
+                <div class="nav-item"><i class="fas fa-user"></i> Profile</div>
+                <div class="nav-item"><i class="fas fa-chart-bar"></i> Analytics</div>
+                <div class="nav-item"><i class="fas fa-cog"></i> Settings</div>
+                <div class="nav-item"><i class="fas fa-shield-alt"></i> Security</div>
+                <div class="nav-item"><i class="fas fa-question-circle"></i> Support</div>
             </div>
-
             <div class="main-content">
                 <div class="welcome-card">
-                    <h2>Welcome back, <span id="user-name">User</span>!</h2>
-                    <p>You're logged in to your SecurePortal dashboard. Here you can manage your account, view security
-                        settings, and monitor activity.</p>
-                    <p>Last login: <span id="last-login">Just now</span> from this browser.</p>
+                    <h2>Welcome, <span id="user-name">User</span>!</h2>
+                    <p>Manage your account, view activity, and monitor security.</p>
+                    <p>Last login: <span id="last-login">Just now</span></p>
                 </div>
 
                 <div class="stats-grid">
                     <div class="stat-card">
                         <h3><i class="fas fa-shield-alt"></i> Security Score</h3>
-                        <div class="stat-value">98%</div>
-                        <div class="stat-text">Excellent account protection</div>
+                        <div class="stat-value">95%</div>
+                        <div class="stat-text">Excellent protection</div>
                     </div>
-
                     <div class="stat-card">
                         <h3><i class="fas fa-bell"></i> Notifications</h3>
-                        <div class="stat-value">3</div>
+                        <div class="stat-value">4</div>
                         <div class="stat-text">Unread messages</div>
                     </div>
-
                     <div class="stat-card">
                         <h3><i class="fas fa-user-check"></i> Profile Status</h3>
-                        <div class="stat-value">85%</div>
-                        <div class="stat-text">Complete your profile</div>
+                        <div class="stat-value">90%</div>
+                        <div class="stat-text">Profile completeness</div>
                     </div>
                 </div>
 
                 <div class="activity-card">
                     <h3><i class="fas fa-history"></i> Recent Activity</h3>
-
                     <div class="activity-item">
-                        <div class="activity-icon">
-                            <i class="fas fa-user-lock"></i>
-                        </div>
+                        <div class="activity-icon"><i class="fas fa-user-lock"></i></div>
                         <div class="activity-details">
                             <div class="activity-title">Password Updated</div>
                             <div class="activity-time">Today at 10:30 AM</div>
                         </div>
                     </div>
-
                     <div class="activity-item">
-                        <div class="activity-icon">
-                            <i class="fas fa-sign-in-alt"></i>
-                        </div>
+                        <div class="activity-icon"><i class="fas fa-sign-in-alt"></i></div>
                         <div class="activity-details">
                             <div class="activity-title">Successful Login</div>
                             <div class="activity-time">Yesterday at 2:15 PM</div>
                         </div>
                     </div>
-
                     <div class="activity-item">
-                        <div class="activity-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
+                        <div class="activity-icon"><i class="fas fa-envelope"></i></div>
                         <div class="activity-details">
                             <div class="activity-title">Email Verified</div>
                             <div class="activity-time">July 14, 2025 at 9:45 AM</div>
-                        </div>
-                    </div>
-
-                    <div class="activity-item">
-                        <div class="activity-icon">
-                            <i class="fas fa-user-plus"></i>
-                        </div>
-                        <div class="activity-details">
-                            <div class="activity-title">Account Created</div>
-                            <div class="activity-time">July 10, 2025 at 4:20 PM</div>
                         </div>
                     </div>
                 </div>
